@@ -11,7 +11,9 @@ import SwiftUI
 struct CleanMvvmArchitectureApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationView{
+                AnimeListView( viewModel: AnimeListViewModel(reposotory: NetworkAnimeRepository()))
+            }
         }
     }
 }
